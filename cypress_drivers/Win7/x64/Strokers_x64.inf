@@ -1,0 +1,262 @@
+; Installation INF for the Cypress Generic USB Driver
+;
+; (c) Copyright 2012 Cypress Semiconductor Corporation
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+provider=%CYUSB3_Provider%
+CatalogFile=CYUSB3.cat
+DriverVer=04/27/2012,1.1.0.00
+
+[SourceDisksNames]
+1=%CYUSB3_Install%,,,
+
+[SourceDisksFiles]
+CYUSB3.sys = 1
+
+[DestinationDirs]
+CYUSB3.Files.Ext = 10,System32\Drivers
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%CYUSB3_Provider%=Device,NT,NTx86,NTamd64
+
+;for all platforms
+[Device.NT]
+%VID_24AA&PID_0000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0000
+%VID_24AA&PID_0001.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0001
+%VID_24AA&PID_0002.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0002
+%VID_24AA&PID_0005.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0005
+%VID_24AA&PID_0006.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0006
+%VID_24AA&PID_0007.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0007
+%VID_24AA&PID_0008.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0008
+%VID_24AA&PID_0009.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0009
+%VID_24AA&PID_0012.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0012
+%VID_24AA&PID_0013.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0013
+%VID_24AA&PID_0014.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0014
+%VID_24AA&PID_0015.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0015
+%VID_24AA&PID_0016.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0016
+%VID_24AA&PID_0022.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0022
+%VID_24AA&PID_0023.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0023
+%VID_24AA&PID_0024.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0024
+%VID_24AA&PID_0025.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0025
+%VID_24AA&PID_0026.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0026
+%VID_24AA&PID_0027.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0027
+%VID_24AA&PID_0028.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0028
+%VID_24AA&PID_0029.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0029
+%VID_24AA&PID_0031.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0031
+%VID_24AA&PID_0032.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0032
+%VID_24AA&PID_0033.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0033
+%VID_24AA&PID_0034.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0034
+%VID_24AA&PID_1000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_1000
+%VID_24AA&PID_2000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_2000
+%VID_24AA&PID_3000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_3000
+%VID_24AA&PID_4000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_4000
+%VID_2457&PID_5002.DeviceDesc%=CyUsb3, USB\VID_2457&PID_5002
+%VID_04B4&PID_1000.DeviceDesc%=CyUsb3, USB\VID_04B4&PID_1000
+
+
+;for x86 platforms
+[Device.NTx86]
+%VID_24AA&PID_0000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0000
+%VID_24AA&PID_0001.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0001
+%VID_24AA&PID_0002.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0002
+%VID_24AA&PID_0005.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0005
+%VID_24AA&PID_0006.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0006
+%VID_24AA&PID_0007.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0007
+%VID_24AA&PID_0008.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0008
+%VID_24AA&PID_0009.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0009
+%VID_24AA&PID_0012.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0012
+%VID_24AA&PID_0013.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0013
+%VID_24AA&PID_0014.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0014
+%VID_24AA&PID_0015.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0015
+%VID_24AA&PID_0016.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0016
+%VID_24AA&PID_0022.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0022
+%VID_24AA&PID_0023.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0023
+%VID_24AA&PID_0024.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0024
+%VID_24AA&PID_0025.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0025
+%VID_24AA&PID_0026.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0026
+%VID_24AA&PID_0027.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0027
+%VID_24AA&PID_0028.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0028
+%VID_24AA&PID_0029.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0029
+%VID_24AA&PID_0031.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0031
+%VID_24AA&PID_0032.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0032
+%VID_24AA&PID_0033.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0033
+%VID_24AA&PID_0034.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0034
+%VID_24AA&PID_1000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_1000
+%VID_24AA&PID_2000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_2000
+%VID_24AA&PID_3000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_3000
+%VID_24AA&PID_4000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_4000
+%VID_2457&PID_5002.DeviceDesc%=CyUsb3, USB\VID_2457&PID_5002
+%VID_04B4&PID_1000.DeviceDesc%=CyUsb3, USB\VID_04B4&PID_1000
+
+
+;for x64 platforms
+[Device.NTamd64]
+%VID_24AA&PID_0000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0000
+%VID_24AA&PID_0001.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0001
+%VID_24AA&PID_0002.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0002
+%VID_24AA&PID_0005.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0005
+%VID_24AA&PID_0006.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0006
+%VID_24AA&PID_0007.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0007
+%VID_24AA&PID_0008.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0008
+%VID_24AA&PID_0009.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0009
+%VID_24AA&PID_0012.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0012
+%VID_24AA&PID_0013.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0013
+%VID_24AA&PID_0014.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0014
+%VID_24AA&PID_0015.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0015
+%VID_24AA&PID_0016.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0016
+%VID_24AA&PID_0022.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0022
+%VID_24AA&PID_0023.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0023
+%VID_24AA&PID_0024.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0024
+%VID_24AA&PID_0025.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0025
+%VID_24AA&PID_0026.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0026
+%VID_24AA&PID_0027.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0027
+%VID_24AA&PID_0028.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0028
+%VID_24AA&PID_0029.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0029
+%VID_24AA&PID_0031.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0031
+%VID_24AA&PID_0032.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0032
+%VID_24AA&PID_0033.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0033
+%VID_24AA&PID_0034.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_0034
+%VID_24AA&PID_1000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_1000
+%VID_24AA&PID_2000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_2000
+%VID_24AA&PID_3000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_3000
+%VID_24AA&PID_4000.DeviceDesc%=CyUsb3, USB\VID_24AA&PID_4000
+%VID_2457&PID_5002.DeviceDesc%=CyUsb3, USB\VID_2457&PID_5002
+%VID_04B4&PID_1000.DeviceDesc%=CyUsb3, USB\VID_04B4&PID_1000
+
+
+
+[CYUSB3.NT]
+CopyFiles=CYUSB3.Files.Ext
+AddReg=CyUsb3.AddReg
+
+[CYUSB3.NT.HW]
+AddReg=CYUSB3.AddReg.Guid
+
+[CYUSB3.NT.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+
+[CYUSB3.NTx86]
+CopyFiles=CYUSB3.Files.Ext
+AddReg=CyUsb3.AddReg
+
+[CYUSB3.NTx86.HW]
+AddReg=CYUSB3.AddReg.Guid
+
+[CYUSB3.NTx86.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+[CYUSB3.NTamd64]
+CopyFiles=CYUSB3.Files.Ext
+AddReg=CyUsb3.AddReg
+
+[CYUSB3.NTamd64.HW]
+AddReg=CYUSB3.AddReg.Guid
+
+[CYUSB3.NTamd64.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+
+[CYUSB3.AddReg]
+; Deprecating - do not use in new apps to identify a CYUSB3 driver
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,CYUSB3.sys
+; You may optionally include a check for DriverBase in your application to check for a CYUSB3 driver
+HKR,,DriverBase,,CYUSB3.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,,FriendlyName,,%CYUSB3_Description%
+
+[CYUSB3.AddService]
+DisplayName    = %CYUSB3_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\CYUSB3.sys
+AddReg         = CYUSB3.AddReg
+LoadOrderGroup = Base
+
+[CYUSB3.Files.Ext]
+CYUSB3.sys
+
+[CYUSB3.AddReg.Guid]
+HKR,,DriverGUID,,%CYUSB3.GUID%
+
+;-------------- WDF Coinstaller installation
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[CYUSB3.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CYUSB3.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[CYUSB3.NTamd64.Wdf]
+KmdfService = CYUSB3, CYUSB3_wdfsect
+
+[CYUSB3.NTx86.Wdf]
+KmdfService = CYUSB3, CYUSB3_wdfsect
+
+[CYUSB3_wdfsect]
+KmdfLibraryVersion = 1.9
+
+
+[Strings]
+CYUSB3_Provider    = "Wasatch"
+CYUSB3_Company     = "Wasatch Photonics"
+CYUSB3_Description = "Wasatch Photonics Stroker Driver"
+CYUSB3_DisplayName = "Wasatch Photonics Stroker Driver"
+CYUSB3_Install     = "Wasatch Photonics Stroker Installation Disk"
+VID_24AA&PID_0000.DeviceDesc="Wasatch Photonics Stroker 785"
+VID_24AA&PID_0001.DeviceDesc="Wasatch Photonics Stroker 785M"
+VID_24AA&PID_0002.DeviceDesc="Wasatch Photonics Stroker 785 High Speed"
+VID_24AA&PID_0005.DeviceDesc="Wasatch Photonics Stroker 785L"
+VID_24AA&PID_0006.DeviceDesc="Wasatch Photonics Stroker 785LM"
+VID_24AA&PID_0007.DeviceDesc="Wasatch Photonics Stroker S11155"
+VID_24AA&PID_0008.DeviceDesc="Wasatch Photonics Stroker S785LM_Dual"
+VID_24AA&PID_0009.DeviceDesc="Wasatch Photonics Stroker SPI"
+VID_24AA&PID_0012.DeviceDesc="Wasatch Photonics Stroker 785C"
+VID_24AA&PID_0013.DeviceDesc="Wasatch Photonics Stroker 785RM"
+VID_24AA&PID_0014.DeviceDesc="Wasatch Photonics Stroker 785L 500khz"
+VID_24AA&PID_0015.DeviceDesc="Wasatch Photonics Stroker 785M SMA"
+VID_24AA&PID_0016.DeviceDesc="Wasatch Photonics Stroker 785LC 500khz"
+VID_24AA&PID_0022.DeviceDesc="Wasatch Photonics Stroker VISNIR 500khz"
+VID_24AA&PID_0023.DeviceDesc="Wasatch Photonics Stroker VIS"
+VID_24AA&PID_0024.DeviceDesc="Wasatch Photonics Stroker NIR"
+VID_24AA&PID_0025.DeviceDesc="Wasatch Photonics Stroker 1064LM"
+VID_24AA&PID_0026.DeviceDesc="Wasatch Photonics Stroker 1064M"
+VID_24AA&PID_0027.DeviceDesc="Wasatch Photonics Stroker InGaAs HM"
+VID_24AA&PID_0028.DeviceDesc="Wasatch Photonics Stroker 785C DAC PS"
+VID_24AA&PID_0029.DeviceDesc="Wasatch Photonics Stroker 532"
+VID_24AA&PID_0031.DeviceDesc="Wasatch Photonics Stroker 1064M HM"
+VID_24AA&PID_0032.DeviceDesc="Wasatch Photonics Stroker 532C DAC PS"
+VID_24AA&PID_0033.DeviceDesc="Wasatch Photonics Stroker 785 Unique Range"
+VID_24AA&PID_0034.DeviceDesc="Wasatch Photonics Stroker 785 Unique Range"
+VID_24AA&PID_1000.DeviceDesc="Wasatch Photonics Device FX2"
+VID_24AA&PID_2000.DeviceDesc="Wasatch Photonics Device InGaAs FX2"
+VID_24AA&PID_3000.DeviceDesc="Wasatch Photonics Device FX3"
+VID_24AA&PID_4000.DeviceDesc="Wasatch Photonics Device ARM"
+VID_2457&PID_5002.DeviceDesc="Wasatch Photonics Device Ocean InGaAs"
+VID_04B4&PID_1000.DeviceDesc="Wasatch Photonics 04B4 test"
+
+CYUSB3.GUID="{AE18AA60-7F6A-11d4-97DD-00010229B959}"
+CYUSB3_Unused      = "."
